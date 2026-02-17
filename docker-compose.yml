@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  api-chatgpt:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
