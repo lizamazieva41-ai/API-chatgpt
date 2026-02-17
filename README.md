@@ -2,6 +2,16 @@
 
 A RESTful API service for integrating with OpenAI's ChatGPT. This project provides a simple and efficient way to interact with ChatGPT through HTTP endpoints.
 
+> ⚠️ **Status:** Development - Not Production Ready  
+> **Current Completion:** ~60% - Core features working, production features needed  
+> See [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) for detailed assessment
+
+## 📚 Documentation
+
+- **[EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)** - Quick overview and recommendations
+- **[PROJECT_EVALUATION.md](PROJECT_EVALUATION.md)** - Comprehensive technical evaluation
+- **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)** - Step-by-step production readiness guide
+
 ## Features
 
 - 🚀 Simple REST API interface for ChatGPT
@@ -298,6 +308,27 @@ This application can be deployed to various cloud platforms:
 - **DigitalOcean App Platform**: Connect your GitHub repo
 - **Vercel/Netlify**: Configure as a Node.js serverless function
 
+## Production Readiness
+
+⚠️ **This project requires additional work before production deployment.**
+
+### What's Missing?
+- ❌ No test suite (0% coverage)
+- ❌ No CI/CD pipeline
+- ❌ No rate limiting or security hardening
+- ❌ No structured logging or monitoring
+- ❌ No database persistence
+
+### Getting Production Ready
+Follow the [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) to add:
+1. **Testing Infrastructure** (Week 1) - Jest + Supertest with 80%+ coverage
+2. **Production Hardening** (Week 2) - Security, logging, validation
+3. **CI/CD Pipeline** (Week 3) - GitHub Actions, automated testing
+4. **Advanced Features** (Week 4) - Database, auth, monitoring
+
+**Estimated time:** 2-4 weeks depending on requirements  
+**See:** [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) for detailed assessment
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -317,11 +348,8 @@ For issues and questions, please open an issue on the GitHub repository.
 
 ---
 
-**Note:** This is a basic implementation. For production use, consider adding:
-- Rate limiting
-- Request validation with a library like Joi
-- Database integration for conversation persistence
-- User authentication and authorization
-- Comprehensive logging
-- Unit and integration tests
-- API documentation with Swagger/OpenAPI
+**Note:** This is a basic implementation suitable for development and learning. For production use:
+- ✅ See [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) for production readiness steps
+- ✅ Review [PROJECT_EVALUATION.md](PROJECT_EVALUATION.md) for detailed assessment
+- ✅ Read [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) for quick overview
+- ⚠️ Implement testing, security, logging, and monitoring before deploying
