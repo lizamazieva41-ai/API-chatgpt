@@ -249,6 +249,55 @@ npm test
 npm run lint
 ```
 
+## Deployment
+
+### Docker Deployment
+
+The easiest way to deploy this application is using Docker.
+
+1. Build the Docker image:
+```bash
+docker build -t api-chatgpt .
+```
+
+2. Run the container:
+```bash
+docker run -p 3000:3000 -e OPENAI_API_KEY=your_key_here api-chatgpt
+```
+
+### Docker Compose
+
+For a more complete deployment setup:
+
+1. Create a `.env` file with your configuration
+2. Run with Docker Compose:
+```bash
+docker-compose up -d
+```
+
+### Manual Deployment
+
+1. Install dependencies:
+```bash
+npm install --production
+```
+
+2. Set environment variables
+3. Start the server:
+```bash
+NODE_ENV=production npm start
+```
+
+### Cloud Deployment
+
+This application can be deployed to various cloud platforms:
+
+- **Heroku**: Add a `Procfile` with `web: node src/app.js`
+- **AWS Elastic Beanstalk**: Deploy using the Node.js platform
+- **Google Cloud Run**: Use the provided Dockerfile
+- **DigitalOcean App Platform**: Connect your GitHub repo
+- **Vercel/Netlify**: Configure as a Node.js serverless function
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
